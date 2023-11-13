@@ -1,0 +1,63 @@
+button {
+    margin: 2;
+}
+
+video {
+    position: absolute;
+    max-width: 200px;
+    height: auto;
+    background-color: black;
+    padding: 50;
+    margin: 1px 1px;
+}
+
+.mainTable {
+    width: 100%;
+}
+
+.localColumn {
+    width: 246px;
+}
+
+.remoteColumn {
+    display: flex;
+    flex-direction: row;
+}
+
+#localVideo {
+    width: 360;
+}
+
+.remoteVideo {
+    float: right;
+}
+
+.videoWrap {
+    margin: 3;
+    /* padding: 5; */
+    /* background-color: papayawhip; */
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1060px) {
+    .video {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .video {
+        width: 70%;
+    }
+}
+
+.wrapper {
+    position: relative;
+}
+
+/* #video {
+    position: absolute;
+    top: 0;
+    right: 0;
+  } */

@@ -1,5 +1,5 @@
+// import { jwtDecode } from "./jwt-decode.js";
 console.log('main.js');
-
 const socket = io();
 
 function get_user_data(mode) {
@@ -42,14 +42,13 @@ function saveCookie(key,data){
 }
 
 function handleCredentialResponse(response) {
-    const data = jwt_decode(response.credential)
+    const data = jwtDecode(response.credential)
     console.log(data)
     console.log(data.email)
     fullName.textContent = data.name
     picture.setAttribute("src", data.picture)
     const data_json = JSON.stringify(data);
     saveCookie('sessionData',encodeURIComponent(data_json))
-
     window.location.href = 'home.html';
 }
 
