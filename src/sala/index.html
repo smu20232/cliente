@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./syles.css">
+
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.70.0/phaser.min.js"
+        integrity="sha512-DwXZikcH79iPi4Psc6TuG++FNbSxdM9K8GzovSqHbDOsSurmYHdHc/n3+cTTfW4Z6tsOZODyXwcicb+Pw88a0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bundle.js"></script>
+    <script type="module" src="game.js"></script>
+    <div class="container">
+        <div class="webcamFrame" id="video">
+            <table class="mainTable">
+                <tr>
+                    <td class="localColumn">
+                        <video id="localVideo" autoplay class="video" muted></video>
+                    </td>
+                    <td class="remoteColumn">
+                        <div id="videoContainer"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="gameFrame" id="game-container" name="game-container"></div>
+    </div>
+</body>
+
+</html>

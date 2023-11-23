@@ -1,6 +1,6 @@
+// import {Phaser} from 'phaser'
 import config from './config.js'
 import sala from './cena-sala.js'
-
 
 class Game extends Phaser.Game {
     constructor() {
@@ -13,7 +13,4 @@ class Game extends Phaser.Game {
         this.scene.start('sala', sala)
     }
 }
-
-window.onload = () => {
-    window.game = new Game()
-}
+window.game = new Game()

@@ -1,7 +1,7 @@
 // This code was inspired by: https://github.com/jamalag/mediasoup3/tree/main
 
 //index.js
-const io = require('socket.io-client')
+const io = require('socket.io')
 const mediasoupClient = require('mediasoup-client')
 const Phaser = require('phaser')
 
@@ -318,7 +318,6 @@ const connectRecvTransport = async (consumerTransport, remoteProducerId, serverC
             newElem.setAttribute('class', 'remoteVideo')
             newElem.innerHTML = '<video id="' + remoteProducerId + '" autoplay class="video" ></video>'
         }
-
         videoContainer.appendChild(newElem)
 
         // destructure and retrieve the video track from the producer
