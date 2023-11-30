@@ -4,11 +4,11 @@ export default class sala extends Phaser.Scene {
   }
 
   preload () {
-    this.load.image('rpg', './assets/abertura.png')
+    this.load.image('rpg', '/assets/abertura.png')
   }
 
   create () {
-    this.imagem = this.add.image(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight, 'rpg').setTint(0xcccccc)
+    this.imagem = this.add.image(this.game.config.width * 0.5, this.game.config.height * 0.5, 'rpg').setTint(0xcccccc)
     this.mensagem = this.add.text(100, 75, 'Escolha uma sala para entrar:', {
       fontFamily: 'monospace',
       font: '32px Courier',

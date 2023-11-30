@@ -10,7 +10,9 @@ class Game extends Phaser.Game {
         this.socket.on('connection-success', ({ socketId }) => {
             console.log(socketId)
         })        
-        this.scene.start('sala', sala)
+        this.scene.add('sala', sala)
+        this.scene.start('sala')
     }
 }
+
 window.game = new Game()

@@ -1,7 +1,7 @@
 // This code was inspired by: https://github.com/jamalag/mediasoup3/tree/main
 
 //index.js
-const io = require('socket.io')
+const io = require('socket.io-client')
 const mediasoupClient = require('mediasoup-client')
 const Phaser = require('phaser')
 
@@ -308,6 +308,7 @@ const connectRecvTransport = async (consumerTransport, remoteProducerId, serverC
 
         // create a new div element for the new consumer media
         const newElem = document.createElement('div')
+        const videoContainer = document.getElementById('videoContainer')
         newElem.setAttribute('id', `td-${remoteProducerId}`)
 
         if (params.kind == 'audio') {
@@ -318,6 +319,7 @@ const connectRecvTransport = async (consumerTransport, remoteProducerId, serverC
             newElem.setAttribute('class', 'remoteVideo')
             newElem.innerHTML = '<video id="' + remoteProducerId + '" autoplay class="video" ></video>'
         }
+        
         videoContainer.appendChild(newElem)
 
         // destructure and retrieve the video track from the producer
@@ -334,6 +336,7 @@ const connectRecvTransport = async (consumerTransport, remoteProducerId, serverC
 socket.on('producer-closed', ({ remoteProducerId }) => {
     // server notification is received when a producer is closed
     // we need to close the client-side consumer and associated transport
+    const videoContainer = document.getElementById('videoContainer')
     const producerToClose = consumerTransports.find(transportData => transportData.producerId === remoteProducerId)
     producerToClose.consumerTransport.close()
     producerToClose.consumer.close()
