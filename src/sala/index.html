@@ -13,20 +13,30 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="bundle.js"></script>
     <script type="module" src="game.js"></script>
+    <!-- <script type="module" src="chat.js"></script> -->
     <div class="container">
         <div class="webcamFrame" id="video">
-            <table class="mainTable">
-                <tr>
-                    <td class="localColumn">
-                        <video id="localVideo" autoplay class="video" muted></video>
-                    </td>
-                    <td class="remoteColumn">
-                        <div id="videoContainer"></div>
-                    </td>
-                </tr>
-            </table>
+            <div class="mainTable">
+                <div class="localColumn">
+                    <video id="localVideo" autoplay class="video" muted></video>
+                </div>
+                <div class="remoteColumn">
+                    <div id="videoContainer" class="remoteColumn"></div>
+                </div>
+            </div>
         </div>
-        <div class="gameFrame" id="game-container" name="game-container"></div>
+        <div class="game-chat">
+            <div class="gameFrame" id="game-container" name="game-container"></div>
+            <div class="chat">
+                <div id="chat-feed">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div id="user-input">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button id="send-button" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

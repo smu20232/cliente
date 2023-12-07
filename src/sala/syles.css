@@ -3,7 +3,7 @@ button {
 }
 
 video {
-    position: absolute;
+    position: relative;
     max-width: 200px;
     height: auto;
     background-color: black;
@@ -12,6 +12,7 @@ video {
 }
 
 .mainTable {
+    display: flex;
     width: 100%;
 }
 
@@ -21,7 +22,6 @@ video {
 
 .remoteColumn {
     display: flex;
-    flex-direction: row;
 }
 
 #localVideo {
@@ -53,8 +53,9 @@ video {
 }
 
 .gameFrame {
-    height: 600px; 
-    padding: 20px;
+    height: 600px;
+    min-width: 70%;
+    /* padding: 50px; */
     /* Add scrollbars if content exceeds height */
     /* overflow: auto;  */
 }
@@ -62,6 +63,55 @@ video {
 .webcamFrame {
     background: #333; /* Example background color for the menu */
     color: #fff; /* Example text color for the menu */
-    height: 150px; /* Set the height of the menu */
+    height: 20%; /* Set the height of the menu */
     padding: 20px;
+}
+
+.game-chat {
+    display: flex;
+    height: 80%;
+}
+
+.chat {
+    background: #a34646; /* Example background color for the menu */
+    color: #c13c3c; /* Example text color for the menu */
+    min-height: 100%;
+    min-width: 30%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+#chat-container {
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+#chat-feed {
+    height: 90%;
+    overflow-y: scroll; 
+    background-color: #f2f2f2;
+}
+
+#user-input {
+    height: 10%;
+    display: flex;
+    background-color: #fff;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#send-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    height: 90vh;
 }
