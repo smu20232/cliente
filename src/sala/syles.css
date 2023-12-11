@@ -55,15 +55,12 @@ video {
 .gameFrame {
     height: 600px;
     min-width: 70%;
-    /* padding: 50px; */
-    /* Add scrollbars if content exceeds height */
-    /* overflow: auto;  */
 }
 
 .webcamFrame {
     background: #333; /* Example background color for the menu */
     color: #fff; /* Example text color for the menu */
-    height: 20%; /* Set the height of the menu */
+    height: 150px; /* Set the height of the menu */
     padding: 20px;
 }
 
